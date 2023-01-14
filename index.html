@@ -1,34 +1,40 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>My Webpage</title>
-        <link rel="stylesheet" href="styles/indexstyle.css">
-    </head>
-    <body>
-        <center>
-            <h1>About Me</h1>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="qualifications.html">Qualifications</a></li>
-                <li><a href="service.html">Service</a></ul>
-            </ul>
-            <br>
-            <h2>Hello, thank you for looking at my page. Let me tell you about myself. I am an undergraduate student
-                persuing his Engineering degree, in the field of Computer Engineering, at 
-                Texas A&M Univeristy. </h2>
-            <h2>I am a fun and an exciting person to be around. I am a hard worker and enjoy both software and hardware
-                side of computer engineering. I enjoy Computer Engineering as a major, because I always had a love of coding and 
-                 had an interest with hardware functionality in electronics. In essence, the main things that interest me in this major
-                is the ability to work on many things that can relate with each other. Whether this is building a website, 
-                making an algorthm for computer components, or making the computer components work with the code that is 
-                designed with them. All of these areas of interest is what makes me pursue a Computer Engineerign degree. </p>
-            <h2>My hobbies are as follows: drawing, anime, video games, playing music, and doing projects.</h2> 
-            <h2>A cool fact about me is that I tend to increase my workload to the limit, since I always look
-                for tasks to do in my freetime.
-            </h2>
-            <!-- possibly make this like a popup or
-                something-->
-        </center>
-    </body>
+	<head>
+		<meta charset="utf-8">
+		<title>My first three.js app</title>
+		<style>
+			body { margin: 0; }
+		</style>
+	</head>
+	<body>
+		<script src="js/three.js"></script>
+		<script>
+			// scenes and perspective
+			const scene = new THREE.Scene();
+			const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
+
+			// render
+			const renderer = new THREE.WebGLRenderer();
+			renderer.setSize( window.innerWidth, window.innerHeight );
+			document.body.appendChild( renderer.domElement );
+			
+			// cube
+			const geometry = new THREE.BoxGeometry( 1, 1, 1 );
+			const material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
+			const cube = new THREE.Mesh( geometry, material );
+			scene.add( cube );
+
+			// render loop
+			function animate() {
+				requestAnimationFrame( animate );
+				cube.rotation.x += 0.01;
+				cube.rotation.y += 0.01;
+				renderer.render( scene, camera );
+			}
+			animate();
+
+camera.position.z = 5;
+		</script>
+	</body>
 </html>
