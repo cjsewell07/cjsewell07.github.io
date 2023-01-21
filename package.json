@@ -1,0 +1,27 @@
+{
+  "name": "cjsewell07.github.io",
+  "version": "1.0.0",
+  "description": "You can use the [editor on GitHub](https://github.com/cjsewell07/cjsewell07.github.io/edit/main/index.md) to maintain and preview the content for your website in Markdown files.",
+  "main": "index.js",
+  "dependencies": {
+    "three": "^0.148.0",
+    "webpack": "^5.75.0"
+  },
+  "devDependencies": {
+    "webpack-cli": "^5.0.1"
+  },
+  "scripts": {
+    "build": "webpack --config webpack.config.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cjsewell07/cjsewell07.github.io.git"
+  },
+  "author": "cjsewell",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cjsewell07/cjsewell07.github.io/issues"
+  },
+  "homepage": "https://github.com/cjsewell07/cjsewell07.github.io#readme"
+}
