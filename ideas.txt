@@ -1,0 +1,15 @@
+The inital load is is a zoom out of a robot that is spherical
+  The robot has a name tag that is my name
+  The robot waves, then hands you a paper or clipboard, which zooms into
+    The user now selects the options to choose
+      Options:
+        About me
+        Experiences
+        Hobbies
+        Projects
+        Interests
+        Github
+        Contact Information
+        Resume
+The robot now guides the user through the options and interviews them
+  The user either walks with wasd or the camera automatically follows the robot.
