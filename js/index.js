@@ -109,9 +109,7 @@ class Figure{
   }
 
   wave(){
-    this.arms.forEach((arm, index) =>{
-      //arm.rotation.y = this.params.armRotation;
-    })
+    this.arm[0].rotation.x += 0.5;
   }
 
   init(){
@@ -141,7 +139,7 @@ const figure = new Figure({
 });
 //new THREE.Box3().setFromObject(figure.group).getCenter(figure.group.position).multiplyScalar(-1)
 
-camera.position.z = 50;
+camera.position.z = 5;
 renderer.setSize(window.innerWidth, window.innerHeight);
 renderer.render(scene, camera);
 document.body.appendChild(renderer.domElement);
@@ -158,13 +156,6 @@ function animate(){
 
   //figure.group.rotation.x += 0.01;
   //figure.group.rotation.y += 0.01;
-  if(figure.group.position.z == 40){
-    figure.group.position.z = 40;
-  }
-  else{
-    figure.group.position.z += 0.5;
-  }
-
   renderer.render(scene, camera);
 }
 
@@ -181,7 +172,6 @@ gsap.to(figure.params, {
 })
 
 gsap.ticker.add(() => {
-  //figure.group.rotation.y = figure.params.ry;
   figure.wave();
 })
 
@@ -194,4 +184,5 @@ else{
   document.getElementById('container').appendChild(warning);
 }
 
+// resizes the window, based on resize event
 window.addEventListener('resize', onWindowResize, false);
