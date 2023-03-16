@@ -9,17 +9,18 @@ class Figure{
       x: 0,
       y: 0,
       z: 0,
+      rx: 0,
       ry: 0,
+      rz: 0,
       ...params
     }
 
     this.arms = [];
     this.group = new THREE.Group();
     this.group.position.set(this.params.x, this.params.y, this.params.z);
-    //this.group.position.x = this.params.x;
-    //this.group.position.x = this.params.y;
-    //this.group.position.x = this.params.z;
+    this.group.rotation.x = this.params.rx;
     this.group.rotation.y = this.params.ry;
+    this.group.rotation.z = this.params.rz;
     scene.add(this.group);
   }
 
@@ -41,10 +42,11 @@ class Figure{
 
   createArms(){
     const height = 1.5;
-    const geometry = new THREE.CylinderGeometry(0.25, 0.25, 1);
-    const geometry2 = new THREE.CylinderGeometry(0.25, 0.25, 1);
+    //const geometry = new THREE.CylinderGeometry(0.25, 0.25, 1);
+    const geometry2 = new THREE.CylinderGeometry(0.25, 0.25, 2.5);
 
     // forarm
+    /*
     for(let i = 0; i < 2; i++){
       const armGroup = new THREE.Group();
       const arm = new THREE.Mesh(geometry, material);
@@ -59,6 +61,7 @@ class Figure{
       armGroup.add(arm);
       this.arms.push(armGroup);
     }
+    */
     // back arm
     for(let i = 0; i < 2; i++){
       const armGroup = new THREE.Group();
@@ -67,10 +70,10 @@ class Figure{
       const box = new THREE.BoxHelper(armGroup, 0xffff00);
       this.group.add(armGroup);
       this.group.add(box);
-      arm.position.y = height * 0.1;
-      armGroup.position.x = m * 0.8;
+      arm.position.y = height * 0;
+      armGroup.position.x = m * 0.7;
 		  armGroup.position.y = 0.1;
-      armGroup.rotation.z = degreesToRadians(30 * m);
+      armGroup.rotation.z = degreesToRadians(20 * m);
       armGroup.add(arm);
       this.arms.push(armGroup);
     }
@@ -94,22 +97,19 @@ class Figure{
   createLegs(){
     const legs = new THREE.Group();
     const geometry = new THREE.CylinderGeometry(0.25,0.25,2);
-    // forleg
     for(let i = 0; i < 2; i++){
       const leg = new THREE.Mesh(geometry, material);
       const m = i % 2 === 0 ? 1 : -1;
       legs.add(leg);
       leg.position.x = m * .5;
     }
-    // hindleg
-
     this.group.add(legs);
     legs.position.y = -2;
     this.group.add(legs);
   }
 
   wave(){
-    this.arm[0].rotation.x += 0.5;
+    this.armGroup[0].rotation.x += degreesToRadians(30);
   }
 
   init(){
@@ -131,15 +131,17 @@ const lightAmbient = new THREE.AmbientLight(0x9eaeff, 0.2);
 const degreesToRadians = (degrees) => {
   return degrees * (Math.PI / 180);
 }
+
 const figure = new Figure({
   x: 0,
   y: 0,
   z: 0,
-  ry: 0
+  rx: 0,
+  ry: 0,
+  rz: 0
 });
-//new THREE.Box3().setFromObject(figure.group).getCenter(figure.group.position).multiplyScalar(-1)
 
-camera.position.z = 5;
+camera.position.z = 20;
 renderer.setSize(window.innerWidth, window.innerHeight);
 renderer.render(scene, camera);
 document.body.appendChild(renderer.domElement);
@@ -153,9 +155,8 @@ figure.init();
 /* Functions */
 function animate(){
   requestAnimationFrame(animate);
-
   //figure.group.rotation.x += 0.01;
-  //figure.group.rotation.y += 0.01;
+  //figure.group.rotation.y += 0.01;;
   renderer.render(scene, camera);
 }
 
@@ -165,15 +166,21 @@ function onWindowResize(){
   renderer.setSize(window.innerWidth, window.innerHeight);
 }
 
+
 gsap.to(figure.params, {
   ry: degreesToRadians(360),
-  repeat: -1,
+  repeat: 20,
   duration: 20
 })
 
+
+// Animation
+//gsap.to(figure.group.position, {duration: 2, z: 15, delay: 0})
+/*
 gsap.ticker.add(() => {
   figure.wave();
 })
+*/
 
 /* WebGL Check */
 if (WebGL.isWebGLAvailable()){
