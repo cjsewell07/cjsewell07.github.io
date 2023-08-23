@@ -11,36 +11,23 @@ const lightDirectional = new THREE.DirectionalLight(0xffffff, 1);
 const lightAmbient = new THREE.AmbientLight(0x9eaeff, 0.2);
 
 /* Adding animations */
+
+
+// Adding model
 const loader = new GLTFLoader();
-let mixer = new THREE.AnimationMixer();
 loader.load('./assets/avatar_waving.glb', function(gltf){
+  gltf.scene.rotation.y = 3.14;
+  gltf.animations = './assets/avatar_waving.glb'
+  // adding model to the scene
   scene.add(gltf.scene);
 }, undefined, function(error){
   console.error(error);
 });
-//mixer.clipAction(mixer).play();
-/*
-let mesh;
-const mixer = new THREE.AnimationMixer(mesh);
-const clips = mesh.animations;
-const avatar_url = new URL('../assets/avatar_waving.glb', import.meta.url);
-const clip = THREE.AnimationClip.findByName(clips, 'waving')
-GLTFLoader.animations.forEach(clip)
-//const action = mixer.clipAction(clip);
-const assetLoader = new GLTFLoader();
 
-assetLoader.load(avatar_url.href, function(gltf){
-  const model = gltf.scene;
-  scene.add(model);
-}, undefined, function(error){
-  console.error(error);
-});
 
-action.play();
-*/
 
 /* Determining initial rendering from tutorial */
-camera.position.z = 20;
+camera.position.z = 5;
 renderer.setSize(window.innerWidth, window.innerHeight);
 renderer.render(scene, camera);
 document.body.appendChild(renderer.domElement);
@@ -49,15 +36,12 @@ scene.add(camera);
 scene.add(lightDirectional);
 scene.add(lightAmbient);
 
-const clock = new THREE.Clock();
-
 /* Functions */
 //Animations
 function animate(){
-  mixer.update(1/60);
+  requestAnimationFrame( animate );
   renderer.render(scene, camera);
 }
-//renderer.setAnimationLoop(animation);
 
 // resizes the window, based on resize event
 function onWindowResize(){
