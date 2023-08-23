@@ -11,20 +11,17 @@ const lightDirectional = new THREE.DirectionalLight(0xffffff, 1);
 const lightAmbient = new THREE.AmbientLight(0x9eaeff, 0.2);
 
 /* Adding animations */
-
-
-// Adding model
+let mixer;
 const loader = new GLTFLoader();
 loader.load('./assets/avatar_waving.glb', function(gltf){
-  gltf.scene.rotation.y = 3.14;
-  gltf.animations = './assets/avatar_waving.glb'
-  // adding model to the scene
   scene.add(gltf.scene);
+  gltf.scene.rotation.y = 3.14;
+  mixer = new THREE.AnimationMixer(gltf.scene);
+  const action = mixer.clipAction(gltf.animations[0]);
+  action.play();
 }, undefined, function(error){
   console.error(error);
 });
-
-
 
 /* Determining initial rendering from tutorial */
 camera.position.z = 5;
@@ -40,6 +37,9 @@ scene.add(lightAmbient);
 //Animations
 function animate(){
   requestAnimationFrame( animate );
+  if (mixer){
+    mixer.update(1/60);
+  }
   renderer.render(scene, camera);
 }
 
