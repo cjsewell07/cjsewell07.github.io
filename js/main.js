@@ -1,7 +1,8 @@
-import * as THREE from 'three';
-//import {OrbitControls} from 'orbitcontrols';
-import {GLTFLoader} from 'gltfloader';
+//import * as THREE from '../node_modules/three/build/three.module.js';
+import * as THREE from 'three'
+import {GLTFLoader} from '../node_modules/three/examples/jsm/loaders/GLTFLoader.js';
 import WebGL from './WebGL.js';
+import {FirstPersonControls} from '../node_modules/three/examples/jsm/controls/FirstPersonControls.js'
 
 //const controls = new OrbitControls( camera, renderer.domElement );
 const scene = new THREE.Scene();
@@ -9,6 +10,11 @@ const camera = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHei
 const renderer = new THREE.WebGLRenderer();
 const lightDirectional = new THREE.DirectionalLight(0xffffff, 1);
 const lightAmbient = new THREE.AmbientLight(0x9eaeff, 0.2);
+
+/* Setting user controls */
+const controls = new FirstPersonControls(camera, renderer.domElement);
+controls.movementSpeed = 1000;
+controls.lookSpeed = 0.1;
 
 /* Adding animations */
 let mixer;
@@ -40,6 +46,8 @@ function animate(){
   if (mixer){
     mixer.update(1/60);
   }
+  //controls.update(clock.getDelta());
+  controls.update(1/60);
   renderer.render(scene, camera);
 }
 
