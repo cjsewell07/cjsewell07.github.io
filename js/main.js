@@ -43,7 +43,7 @@ function init(){
 
   const blocker = document.getElementById( 'blocker' );
   const instructions = document.getElementById( 'instructions' );
-    instructions.addEventListener( 'click', function () {
+  instructions.addEventListener( 'click', function () {
     controls.lock();
   } );
 
