@@ -1,9 +1,8 @@
 //import * as THREE from '../node_modules/three/build/three.module.js';
 import * as THREE from 'three'
 import WebGL from './WebGL.js';
-import {GLTFLoader} from '../node_modules/three/examples/jsm/loaders/GLTFLoader.js';
-import {FirstPersonControls} from '../node_modules/three/examples/jsm/controls/FirstPersonControls.js'
-import {PointerLockControls} from '../node_modules/three/examples/jsm/controls/PointerLockControls.js'
+import {GLTFLoader} from 'https://unpkg.com/three/examples/jsm/loaders/GLTFLoader.js';
+import {PointerLockControls} from 'https://unpkg.com/three/examples/jsm/controls/PointerLockControls.js'
 
 let scene, camera, renderer, controls;
 let lightDirectional, lightAmbient;
@@ -111,13 +110,8 @@ function init(){
     }
   };
 
-  const onMouseMove = function(event){
-    controls.onMouseMove(event);
-  };
-
   document.addEventListener('keydown', onKeyDown);
   document.addEventListener('keyup', onKeyUp);
-  document.addEventListener('mousemove', onMouseMove)
 
   raycaster = new THREE.Raycaster( new THREE.Vector3(), new THREE.Vector3( 0, - 1, 0 ), 0, 10 );
 
