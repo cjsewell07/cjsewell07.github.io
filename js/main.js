@@ -115,9 +115,20 @@ function init(){
 
   raycaster = new THREE.Raycaster( new THREE.Vector3(), new THREE.Vector3( 0, - 1, 0 ), 0, 10 );
 
+  addEnvironment();
   addAnimation();
   addScene();
   
+}
+
+function addEnvironment(){
+  loader.load('./assets/environment.glb', function(gltf){
+    scene.add(gltf.scene);
+    gltf.scene.position.y = -2;
+    gltf.scene.rotation.y = 3.14;
+  }, undefined, function(error){
+    console.error(error);
+  });
 }
 
 /* Adding animations */
@@ -125,6 +136,7 @@ function addAnimation(){
   loader.load('./assets/avatar_waving.glb', function(gltf){
     scene.add(gltf.scene);
     gltf.scene.rotation.y = 3.14;
+    gltf.scene.position.y = -2;
     mixer = new THREE.AnimationMixer(gltf.scene);
     const action = mixer.clipAction(gltf.animations[0]);
     action.play();
@@ -143,7 +155,6 @@ function addScene(){
 function animate(){
   requestAnimationFrame(animate);
   const time = performance.now();
-  //controls.lock();
 
   if (mixer){
     mixer.update(1/60);
@@ -160,8 +171,8 @@ function animate(){
     direction.x = Number(moveRight) - Number(moveLeft);
     direction.normalize(); // this ensures consistent movements in all directions
 
-    if (moveForward || moveBackward) velocity.z -= direction.z * 400.0 * delta;
-    if (moveLeft || moveRight) velocity.x -= direction.x * 400.0 * delta;
+    if (moveForward || moveBackward) velocity.z -= direction.z * 100.0 * delta;
+    if (moveLeft || moveRight) velocity.x -= direction.x * 100.0 * delta;
     if (true){
       velocity.y = Math.max(0, velocity.y);
       canJump = true;
