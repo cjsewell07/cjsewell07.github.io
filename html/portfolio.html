@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <link rel="stylesheet" type="text/css" href="../css/style.css">
+        <div class="nav" id="websiteNav">
+            <a href="projects.html">Projects</a>
+        </div>
+        <div id="blocker">
+            <div id="instructions">
+                <p style="font-size:36px">
+                    Click to play
+                </p>
+                <p>
+                    Move: WASD<br/>
+                    Jump: SPACE<br/>
+                    Look: MOUSE
+                </p>
+            </div>
+        </div>
+        <script type="importmap">
+            {
+                "imports": {
+                    "three": "https://unpkg.com/three/build/three.module.js",
+                    "rapier": "https://cdn.skypack.dev/@dimforge/rapier3d-compat"
+                }
+            }
+        </script>
+        <script type="module" src="../js/main.js"></script>
+    </body>
+</html>
