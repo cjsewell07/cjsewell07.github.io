@@ -1,3 +1,88 @@
+body {
+  background-color: rgb(27, 27, 27);
+}
+
+/* Nav Bar */
+.navbar{
+  position: fixed;
+  display: inline-block;
+  top: 0px;
+  background-color: black;
+  width: 100%;
+  text-align: center;
+  /* Centering the navbar */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.navbar ul{
+  padding: 0px 0px;
+}
+
+div{
+  text-align: center;
+  color: white;
+}
+
+li{
+  display: inline;
+}
+
+li a{
+  color: white;
+  background-color: black;
+  text-align: center;
+  padding: 0px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  color: red;
+}
+
+/* Home section */
+.home{
+  min-height: 100vh;
+}
+
+.home h1{
+  position: absolute;
+  margin-top: 40vh;
+  margin-left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  font-size: 10vw;
+}
+
+.home h2{
+  position: absolute;
+  margin-top: 60vh;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  font-size: 2vw;
+}
+
+/* Skills section */
+.skills{
+  min-height: 100vh;
+}
+
+/* Projects section */
+.projects{
+  min-height: 100vh;
+}
+
+/* Experience section */
+.experience{
+  min-height: 100vh;
+}
+
+/* Contact section */
+.contact{
+  min-height: 100vh;
+}
+
 #info{
   position: absolute;
   top: 10px;
@@ -7,14 +92,14 @@
   display:block;
 }
 
-#blocker {
+#blocker{
   position: absolute;
   width: 100%;
   height: 100%;
   background-color: rgba(0,0,0,0.5);
 }
 
-#instructions {
+#instructions{
   width: 100%;
   height: 100%;
 
