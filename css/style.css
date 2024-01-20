@@ -10,6 +10,8 @@ body {
   background-color: black;
   width: 100%;
   text-align: center;
+  /* Stops overlapping when scrolling */
+  z-index:1;
   /* Centering the navbar */
   left: 50%;
   transform: translateX(-50%);
