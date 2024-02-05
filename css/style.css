@@ -68,11 +68,64 @@ li a:hover {
 /* Skills section */
 .skills{
   min-height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.skills h1{
+  position: absolute;
+  margin-top: 10vh;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  font-size: 5vw;
+}
+
+.dev{
+  grid-column-start: 3;
+  grid-column-end: span 8;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: 15vh;
+  background-color: black;
+  box-shadow: inset 0 0 0 2px red;
+}
+
+.software{
+  grid-column-start: 1;
+  box-shadow: inset 0 0 0 2px red;
+}
+
+.fullstack{
+  grid-column-start: 2;
+  box-shadow: inset 0 0 0 2px red;
+}
+
+.firmware{
+  grid-column-start: 3;
+  box-shadow: inset 0 0 0 2px red;
+}
+
+.app{
+  grid-column-start: 4;
+  box-shadow: inset 0 0 0 2px red;
 }
 
 /* Projects section */
 .projects{
   min-height: 100vh;
+}
+
+a{
+  color: white;
+  background-color: black;
+  text-align: center;
+  padding: 0px 16px;
+  text-decoration: none;
+}
+
+a:hover {
+  color: red;
 }
 
 /* Experience section */
@@ -113,5 +166,5 @@ li a:hover {
   text-align: center;
   font-size: 14px;
   cursor: pointer;
-  color: rgba(0,0,255,0.5);
+  color: white;
 }
