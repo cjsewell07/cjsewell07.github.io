@@ -70,46 +70,142 @@ li a:hover {
   min-height: 100vh;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(2, 50vh);
 }
 
 .skills h1{
   position: absolute;
-  margin-top: 10vh;
+  margin-top: 15vh;
   left: 50%;
   margin-right: -50%;
   transform: translate(-50%, -50%);
-  font-size: 5vw;
+  font-size: 4vw;
 }
 
 .dev{
   grid-column-start: 3;
   grid-column-end: span 8;
+  
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  margin-top: 15vh;
+  grid-template-rows: repeat(2, min-content);
+
+  margin-top: 25vh;
   background-color: black;
   box-shadow: inset 0 0 0 2px red;
+}
+.dev h2{
+  grid-column-start: 1;
+  grid-column-end: span 4;
+  grid-row-start: 1;
+  font-size: 2vw;
 }
 
 .software{
   grid-column-start: 1;
+  grid-row-start: 2;
   box-shadow: inset 0 0 0 2px red;
+  background-color: black;
+}
+.software h3{
+  font-size: 1.5vw;
+}
+.software p{
+  font-size: 1vw;
+}
+.software h4{
+  font-size: 1vw;
+}
+.software ul{
+  padding: 0px 0px;
+}
+.software ul li{
+  background-color: gray;
+  text-align: center;
+  display: inline-block;
+  padding: 0px 0px;
+  font-size: 1vw;
 }
 
 .fullstack{
   grid-column-start: 2;
+  grid-row-start: 2;
   box-shadow: inset 0 0 0 2px red;
+  background-color: black;
+}
+.fullstack h3{
+  font-size: 1.5vw;
+}
+.fullstack p{
+  font-size: 1vw;
+}
+.fullstack h4{
+  font-size: 1vw;
+}
+.fullstack ul{
+  padding: 0px 0px;
+}
+.fullstack ul li{
+  background-color: gray;
+  text-align: center;
+  display: inline-block;
+  padding: 0px 0px;
+  font-size: 1vw;
 }
 
 .firmware{
   grid-column-start: 3;
+  grid-row-start: 2;
   box-shadow: inset 0 0 0 2px red;
+  background-color: black;
 }
+.firmware h3{
+  font-size: 1.5vw;
+}
+.firmware p{
+  font-size: 1vw;
+}
+.firmware h4{
+  font-size: 1vw;
+}
+.firmware ul{
+  padding: 0px 0px;
+}
+.firmware ul li{
+  background-color: gray;
+  text-align: center;
+  display: inline-block;
+  padding: 0px 0px;
+  font-size: 1vw;
+}
+
 
 .app{
   grid-column-start: 4;
+  grid-row-start: 2;
   box-shadow: inset 0 0 0 2px red;
+  background-color: black;
 }
+.app h3{
+  font-size: 1.5vw;
+}
+.app p{
+  font-size: 1vw;
+}
+.app h4{
+  font-size: 1vw;
+}
+.app ul{
+  padding: 0px 0px;
+}
+.app ul li{
+  background-color: gray;
+  text-align: center;
+  display: inline-block;
+  padding: 0px 0px;
+  font-size: 1vw;
+}
+
 
 /* Projects section */
 .projects{
