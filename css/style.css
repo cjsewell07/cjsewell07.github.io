@@ -123,8 +123,9 @@ li a:hover {
   background-color: gray;
   text-align: center;
   display: inline-block;
-  padding: 0px 0px;
+  padding: 10px 10px;
   font-size: 1vw;
+  border-radius: 50%;
 }
 
 .fullstack{
@@ -149,8 +150,9 @@ li a:hover {
   background-color: gray;
   text-align: center;
   display: inline-block;
-  padding: 0px 0px;
+  padding: 10px 10px;
   font-size: 1vw;
+  border-radius: 50%;
 }
 
 .firmware{
@@ -175,10 +177,10 @@ li a:hover {
   background-color: gray;
   text-align: center;
   display: inline-block;
-  padding: 0px 0px;
+  padding: 10px 10px;
   font-size: 1vw;
+  border-radius: 50%;
 }
-
 
 .app{
   grid-column-start: 4;
@@ -202,8 +204,9 @@ li a:hover {
   background-color: gray;
   text-align: center;
   display: inline-block;
-  padding: 0px 0px;
+  padding: 10px 10px;
   font-size: 1vw;
+  border-radius: 50%;
 }
 
 
