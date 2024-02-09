@@ -88,9 +88,10 @@ li a:hover {
   
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(2, min-content);
+  grid-template-rows: repeat(2, auto);
 
   margin-top: 25vh;
+  height: 100%;
   background-color: black;
   box-shadow: inset 0 0 0 2px red;
 }
@@ -98,7 +99,6 @@ li a:hover {
   grid-column-start: 1;
   grid-column-end: span 4;
   grid-row-start: 1;
-  font-size: 2vw;
 }
 
 .software{
@@ -107,15 +107,6 @@ li a:hover {
   box-shadow: inset 0 0 0 2px red;
   background-color: black;
 }
-.software h3{
-  font-size: 1.5vw;
-}
-.software p{
-  font-size: 1vw;
-}
-.software h4{
-  font-size: 1vw;
-}
 .software ul{
   padding: 0px 0px;
 }
@@ -123,9 +114,8 @@ li a:hover {
   background-color: gray;
   text-align: center;
   display: inline-block;
-  padding: 10px 10px;
-  font-size: 1vw;
-  border-radius: 50%;
+  padding: 5px 10px;
+  border-radius: 20px;
 }
 
 .fullstack{
@@ -134,15 +124,6 @@ li a:hover {
   box-shadow: inset 0 0 0 2px red;
   background-color: black;
 }
-.fullstack h3{
-  font-size: 1.5vw;
-}
-.fullstack p{
-  font-size: 1vw;
-}
-.fullstack h4{
-  font-size: 1vw;
-}
 .fullstack ul{
   padding: 0px 0px;
 }
@@ -150,9 +131,8 @@ li a:hover {
   background-color: gray;
   text-align: center;
   display: inline-block;
-  padding: 10px 10px;
-  font-size: 1vw;
-  border-radius: 50%;
+  padding: 5px 10px;
+  border-radius: 20px;
 }
 
 .firmware{
@@ -161,15 +141,6 @@ li a:hover {
   box-shadow: inset 0 0 0 2px red;
   background-color: black;
 }
-.firmware h3{
-  font-size: 1.5vw;
-}
-.firmware p{
-  font-size: 1vw;
-}
-.firmware h4{
-  font-size: 1vw;
-}
 .firmware ul{
   padding: 0px 0px;
 }
@@ -177,9 +148,8 @@ li a:hover {
   background-color: gray;
   text-align: center;
   display: inline-block;
-  padding: 10px 10px;
-  font-size: 1vw;
-  border-radius: 50%;
+  padding: 5px 10px;
+  border-radius: 20px;
 }
 
 .app{
@@ -188,15 +158,6 @@ li a:hover {
   box-shadow: inset 0 0 0 2px red;
   background-color: black;
 }
-.app h3{
-  font-size: 1.5vw;
-}
-.app p{
-  font-size: 1vw;
-}
-.app h4{
-  font-size: 1vw;
-}
 .app ul{
   padding: 0px 0px;
 }
@@ -204,9 +165,8 @@ li a:hover {
   background-color: gray;
   text-align: center;
   display: inline-block;
-  padding: 10px 10px;
-  font-size: 1vw;
-  border-radius: 50%;
+  padding: 5px 10px;
+  border-radius: 20px;
 }
 
 /* Projects section */
@@ -223,33 +183,63 @@ li a:hover {
   transform: translate(-50%, -50%);
   font-size: 4vw;
 }
-
-.proj_list{
-  display: grid;
-  grid-column-start: 3;
-  grid-column-end: span 9;
+.project_list{
+  grid-column-start: 1;
+  grid-column-end: 13;
   margin-top: 25vh;
-  background-color: black;
+  max-height: 75vh;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(13, 1fr);
+  gap: 3vh;
+}
+
+.online_portfolio{
   box-shadow: inset 0 0 0 2px red;
+  grid-column-start: 2;
+  grid-column-end: 4;
+  background-color: black;
+}
+.online_portfolio h3{
+  background-color: gray;
+  padding: 10px 10px;
+  margin: 1vw;
 }
 
-.online_port{
-  display:grid;
-  grid-template-columns: repeat(8, 0.25fr);
+.ub2wet{
   box-shadow: inset 0 0 0 2px red;
+  grid-column-start: 5;
+  grid-column-end: 7;
   background-color: black;
 }
-
-a{
-  color: white;
-  background-color: black;
-  text-align: center;
-  padding: 0px 16px;
-  text-decoration: none;
+.ub2wet h3{
+  background-color: gray;
+  padding: 10px 10px;
+  margin: 1vw;
 }
 
-a:hover {
-  color: red;
+.waspet{
+  box-shadow: inset 0 0 0 2px red;
+  grid-column-start: 8;
+  grid-column-end: 10;
+  background-color: black;
+}
+.waspet h3{
+  background-color: gray;
+  padding: 10px 10px;
+  margin: 1vw;
+}
+
+.psyrus{
+  box-shadow: inset 0 0 0 2px red;
+  grid-column-start: 11;
+  grid-column-end: 13;
+  background-color: black;
+}
+.psyrus h3{
+  background-color: gray;
+  padding: 10px 10px;
+  margin: 1vw;
 }
 
 /* Experience section */
@@ -257,7 +247,6 @@ a:hover {
   min-height: 100vh;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: repeat(2, 50vh);
 }
 .experience h1{
   position: absolute;
@@ -267,13 +256,71 @@ a:hover {
   transform: translate(-50%, -50%);
   font-size: 4vw;
 }
+.work{
+  grid-column-start: 3;
+  grid-column-end: 11;
+  margin-top: 25vh;
+}
+
+.lynntech{
+  box-shadow: inset 0 0 0 2px red;
+  grid-column-start: 2;
+  grid-column-end: 4;
+  background-color: black;
+}
+
+.title{
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  padding: 0px 0px;
+}
+.company{
+  grid-column-start: 1;
+  grid-column-end: 5;
+}
+.date{
+  grid-column-start: 6;
+  grid-column-end: 9;
+}
+
+.comp_info{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 0px 0px;
+}
+.comp_info .location{
+  grid-column-start: 1;
+}
+.comp_info .website{
+  grid-column-start: 2;
+  text-align: center;
+  height: min-content;
+}
+.comp_info .website a{
+  text-align: center;
+  height: min-content;
+}
+
+.tools{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 0px 0px;
+}
+.tools div ul{
+  padding: 0px 0px;
+}
+.tools div ul li{
+  background-color: gray;
+  text-align: center;
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 20px;
+}
 
 /* Contact section */
 .contact{
   min-height: 100vh;
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: repeat(2, 50vh);
 }
 .contact{
   position: absolute;
@@ -282,6 +329,31 @@ a:hover {
   margin-right: -50%;
   transform: translate(-50%, -50%);
   font-size: 4vw;
+}
+
+.contact h1{
+  position: absolute;
+  margin-top: 15vh;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  font-size: 4vw;
+}
+.socials{
+  margin-top: 25vh;
+  padding: 0px 0px;
+}
+
+a{
+  color: white;
+  background-color: black;
+  text-align: center;
+  padding: 0px 16px;
+  text-decoration: none;
+  font-size: 24px;
+}
+a:hover {
+  color: red;
 }
 
 #info{
@@ -292,14 +364,12 @@ a:hover {
   z-index: 100;
   display:block;
 }
-
 #blocker{
   position: absolute;
   width: 100%;
   height: 100%;
   background-color: rgba(0,0,0,0.5);
 }
-
 #instructions{
   width: 100%;
   height: 100%;
