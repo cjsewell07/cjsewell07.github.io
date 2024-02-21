@@ -273,6 +273,7 @@ li a:hover {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   padding: 0px 0px;
+  box-shadow: inset 0 0 0 2px red;
 }
 .company{
   grid-column-start: 1;
@@ -293,12 +294,11 @@ li a:hover {
   grid-column-start: 1;
 }
 .comp_info .website{
-  grid-column-start: 2;
-  text-align: center;
+  grid-column-start: 4;
 }
 .comp_info .website a{
-  text-align: center;
-  height: min-content;
+  font-size: 18px;
+  padding: 0px 0px;
 }
 
 .tools{
