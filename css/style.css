@@ -67,7 +67,8 @@ li a:hover {
 
 /* Skills section */
 .skills{
-  min-height: 100vh;
+  min-height: 50vh;
+  max-height: 100vh;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: repeat(2, 50vh);
@@ -171,7 +172,8 @@ li a:hover {
 
 /* Projects section */
 .projects{
-  min-height: 100vh;
+  min-height: 25vh;
+  max-height: 100vh;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
 }
@@ -187,7 +189,7 @@ li a:hover {
   grid-column-start: 1;
   grid-column-end: 13;
   margin-top: 25vh;
-  max-height: 75vh;
+  max-height: 50vh;
   display: grid;
   grid-template-rows: repeat(2, 1fr);
   grid-template-columns: repeat(13, 1fr);
@@ -244,13 +246,14 @@ li a:hover {
 
 /* Experience section */
 .experience{
-  min-height: 100vh;
+  min-height: 50vh;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
 }
 .experience h1{
   position: absolute;
   margin-top: 15vh;
+  max-height: 50vh;
   left: 50%;
   margin-right: -50%;
   transform: translate(-50%, -50%);
@@ -319,7 +322,7 @@ li a:hover {
 
 /* Contact section */
 .contact{
-  min-height: 100vh;
+  min-height: 20vh;
   display: grid;
 }
 .contact{
@@ -333,14 +336,14 @@ li a:hover {
 
 .contact h1{
   position: absolute;
-  margin-top: 15vh;
+  margin-top: 20vh;
   left: 50%;
   margin-right: -50%;
   transform: translate(-50%, -50%);
   font-size: 4vw;
 }
 .socials{
-  margin-top: 25vh;
+  margin-top: 20vh;
   padding: 0px 0px;
 }
 
