@@ -302,36 +302,41 @@ li a:hover {
   background-color: black;
 }
 
-.title{
-  display: grid;
-  grid-template-columns: repeat(8, 1fr);
-  padding: 0px 0px;
-  box-shadow: inset 0 0 0 2px red;
-}
-.company{
-  grid-column-start: 1;
-  grid-column-end: 5;
-}
-.date{
-  grid-column-start: 6;
-  grid-column-end: 9;
-}
-
 .comp_info{
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   padding: 0px 0px;
-  height: 25%;
+  box-shadow: inset 0 0 0 2px red;
+  background-color: black;
 }
-.comp_info .location{
+.company{
   grid-column-start: 1;
+  grid-column-end: 6;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  text-align: left;
+  font-size: 32px;
 }
-.comp_info .website{
-  grid-column-start: 4;
+.date{
+  grid-column-start: 6;
+  grid-column-end: 9;
+  text-align: right;
 }
-.comp_info .website a{
+.website{
+  display: inline-block;
+  grid-column-start: 1;
+  grid-column-end: 5;
+}
+.website a{
+  padding: 0;
+  text-align: left;
   font-size: 18px;
-  padding: 0px 0px;
+}
+.location{
+  grid-column-start: 6;
+  grid-column-end: 9;
+  text-align: right;
+  margin-top: 0;
 }
 
 .tools{
