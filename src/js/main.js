@@ -178,7 +178,7 @@ function init(){
 }
 
 function addEnvironment(){
-  loader.load('../assets/environment.glb', function(gltf){
+  loader.load('../../assets/environment.glb', function(gltf){
     scene.add(gltf.scene);
     gltf.scene.position.y = -2;
     gltf.scene.rotation.y = 3.14;
@@ -189,7 +189,7 @@ function addEnvironment(){
 
 /* Adding animations */
 function addAnimation(){
-  loader.load('../assets/avatar_waving.glb', function(gltf){
+  loader.load('../../assets/avatar_waving.glb', function(gltf){
     scene.add(gltf.scene);
     gltf.scene.rotation.y = 3.14;
     gltf.scene.position.y = -2;
