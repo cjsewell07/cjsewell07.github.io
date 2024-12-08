@@ -89,7 +89,7 @@ li a:hover {
   max-height: 100vh;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: repeat(1, 50vh);
+  /*grid-template-rows: repeat(1, 50vh);*/
 }
 
 .skills h1{
@@ -101,12 +101,20 @@ li a:hover {
   font-size: 4vw;
 }
 
+.skills ul li{
+  background-color: gray;
+  text-align: center;
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 20px;
+}
+
 .dev{
-  grid-column-start: 3;
-  grid-column-end: span 8;
+  grid-column-start: 2;
+  grid-column-end: span 10;
   
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(1, auto);
 
   margin-top: 20vh;
