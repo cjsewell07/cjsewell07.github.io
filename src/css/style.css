@@ -89,7 +89,7 @@ li a:hover {
   max-height: 100vh;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: repeat(2, 50vh);
+  grid-template-rows: repeat(1, 50vh);
 }
 
 .skills h1{
@@ -107,23 +107,18 @@ li a:hover {
   
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(2, auto);
+  grid-template-rows: repeat(1, auto);
 
   margin-top: 20vh;
-  height: 100%;
+  height: 50%;
   background-color: black;
   box-shadow: inset 0 0 0 2px red;
-}
-.dev h2{
-  grid-column-start: 1;
-  grid-column-end: span 4;
-  grid-row-start: 1;
 }
 
 .software{
   grid-column-start: 1;
-  grid-row-start: 2;
-  box-shadow: inset 0 0 0 2px red;
+  grid-row-start: 1;
+  box-shadow: inset 0 0 0 1px red;
   background-color: black;
 }
 .software ul{
@@ -139,8 +134,8 @@ li a:hover {
 
 .fullstack{
   grid-column-start: 2;
-  grid-row-start: 2;
-  box-shadow: inset 0 0 0 2px red;
+  grid-row-start: 1;
+  box-shadow: inset 0 0 0 1px red;
   background-color: black;
 }
 .fullstack ul{
@@ -156,8 +151,8 @@ li a:hover {
 
 .firmware{
   grid-column-start: 3;
-  grid-row-start: 2;
-  box-shadow: inset 0 0 0 2px red;
+  grid-row-start: 1;
+  box-shadow: inset 0 0 0 1px red;
   background-color: black;
 }
 .firmware ul{
@@ -173,8 +168,8 @@ li a:hover {
 
 .app{
   grid-column-start: 4;
-  grid-row-start: 2;
-  box-shadow: inset 0 0 0 2px red;
+  grid-row-start: 1;
+  box-shadow: inset 0 0 0 1px red;
   background-color: black;
 }
 .app ul{
