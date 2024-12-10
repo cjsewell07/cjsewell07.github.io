@@ -101,6 +101,11 @@ li a:hover {
   font-size: 4vw;
 }
 
+.skills p{
+  min-height: 8vh;
+}
+
+
 .skills ul li{
   background-color: gray;
   text-align: center;
