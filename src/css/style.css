@@ -391,8 +391,9 @@ li a:hover {
   padding: 0px 0px;
 }
 
-.socials ul{
-  align-items: center;
+.socials a img{
+  max-width: 5vw;
+  height: auto;
 }
 
 a{
