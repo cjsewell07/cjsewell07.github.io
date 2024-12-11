@@ -142,25 +142,12 @@ li a:hover {
   /*align-items: center;*/
 }
 
-.dev .title{
-  border-bottom: 2px solid red;
-}
-/*
-.software{
-  grid-column-start: 1;
-  grid-row-start: 1;
-  
-  background-color: black;
-}
-.software ul{
+.dev div ul{
   padding: 0px 0px;
 }
-.software ul li{
-  background-color: gray;
-  text-align: center;
-  display: inline-block;
-  padding: 5px 10px;
-  border-radius: 20px;
+
+.dev .title{
+  border-bottom: 2px solid red;
 }
 
 /* Projects section */
