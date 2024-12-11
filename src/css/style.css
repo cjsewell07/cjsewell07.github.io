@@ -91,7 +91,6 @@ li a:hover {
   grid-template-columns: repeat(12, 1fr);
   /*grid-template-rows: repeat(1, 50vh);*/
 }
-
 .skills h1{
   position: absolute;
   margin-top: 15vh;
@@ -100,21 +99,17 @@ li a:hover {
   transform: translate(-50%, -50%);
   font-size: 4vw;
 }
-
 .skills h2{
   font-size: 2vw;
 }
-
 .skills h3{
   font-size: 1.5vw;
 }
-
 .skills p{
   min-height: fit-content;
   text-align: center;
   font-size: 1vw;
 }
-
 .skills ul li{
   background-color: gray;
   text-align: center;
@@ -136,16 +131,12 @@ li a:hover {
   background-color: black;
   box-shadow: inset 0 0 0 2px red;
 }
-
 .dev div{
   border-right: 2px solid red;
-  /*align-items: center;*/
 }
-
 .dev div ul{
   padding: 0px 0px;
 }
-
 .dev .title{
   border-bottom: 2px solid red;
 }
