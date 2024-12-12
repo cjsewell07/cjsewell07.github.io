@@ -89,7 +89,6 @@ li a:hover {
   max-height: 100vh;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  /*grid-template-rows: repeat(1, 50vh);*/
 }
 .skills h1{
   position: absolute;
@@ -156,78 +155,48 @@ li a:hover {
   transform: translate(-50%, -50%);
   font-size: 4vw;
 }
+
 .project_list{
-  grid-column-start: 1;
-  grid-column-end: 13;
+  grid-column-start: 2;
+  grid-column-end: span 10;
+
+  display: grid;
+  grid-template-rows: auto;
+
   margin-top: 25vh;
   max-height: 50vh;
+}
+
+.project_list div{
   display: grid;
-  grid-template-rows: repeat(2, 1fr);
-  grid-template-columns: repeat(13, 1fr);
-  gap: 3vh;
-  /*gap: 1rem;*/
+  grid-template-columns: auto;
+  gap: 2%;
 }
-
-.online_portfolio{
+.project_list div h2{
+  grid-column-start: 1;
+  grid-column-end: span 10;
+  grid-auto-columns: auto;
+  font-size: 2vw;
+}
+.project_list div div{
   box-shadow: inset 0 0 0 2px red;
-  grid-column-start: 2;
-  grid-column-end: 4;
   background-color: black;
 }
-.online_portfolio h3{
+.project_list div div h3{
   background-color: gray;
   padding: 10px 10px;
   margin: 1vw;
+  grid-column-end: span 19;
+  font-size: 1.5vw;
 }
+.project_list div div p{
+  min-height: fit-content;
+  text-align: center;
+  font-size: 1vw;
 
-.ubet{
-  box-shadow: inset 0 0 0 2px red;
-  grid-column-start: 5;
-  grid-column-end: 7;
-  background-color: black;
+  grid-column-start: 1;
+  grid-column-end: span 10;
 }
-.ubet h3{
-  background-color: gray;
-  padding: 10px 10px;
-  margin: 1vw;
-}
-
-.waspet{
-  box-shadow: inset 0 0 0 2px red;
-  grid-column-start: 8;
-  grid-column-end: 10;
-  background-color: black;
-}
-.waspet h3{
-  background-color: gray;
-  padding: 10px 10px;
-  margin: 1vw;
-}
-
-.rand_meal_gen{
-  box-shadow: inset 0 0 0 2px red;
-  grid-column-start: 11;
-  grid-column-end: 13;
-  background-color: black;
-}
-.rand_meal_gen h3{
-  background-color: gray;
-  padding: 10px 10px;
-  margin: 1vw;
-}
-
-.psyrus{
-  box-shadow: inset 0 0 0 2px red;
-  grid-column-start: 2;
-  grid-column-end: 4;
-  background-color: black;
-}
-.psyrus h3{
-  background-color: gray;
-  padding: 10px 10px;
-  margin: 1vw;
-}
-
 /* Experience section */
 .experience{
   min-height: 50vh;
@@ -236,7 +205,7 @@ li a:hover {
 }
 .experience h1{
   position: absolute;
-  margin-top: 15vh;
+  margin-top: 25vh;
   max-height: 50vh;
   left: 50%;
   margin-right: -50%;
@@ -246,7 +215,7 @@ li a:hover {
 .work{
   grid-column-start: 3;
   grid-column-end: 11;
-  margin-top: 25vh;
+  margin-top: 35vh;
 }
 
 .lynntech{
