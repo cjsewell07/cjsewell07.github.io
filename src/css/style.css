@@ -84,14 +84,11 @@ li a:hover {
 }
 
 /* Skills section */
+/* TODO: Make the top section be grayed to fit the color scheme*/
 .skills{
-  min-height: 50vh;
-  max-height: 100vh;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: repeat(2, 50vh);
 }
-
 .skills h1{
   position: absolute;
   margin-top: 15vh;
@@ -100,98 +97,56 @@ li a:hover {
   transform: translate(-50%, -50%);
   font-size: 4vw;
 }
+.skills h2{
+  font-size: 2vw;
+}
+.skills h3{
+  font-size: 1.5vw;
+}
+.skills p{
+  min-height: fit-content;
+  text-align: center;
+  font-size: 1.2vw;
+}
+.skills li{
+  background-color: gray;
+  text-align: center;
+  display: inline-block;
+  padding: 5px 10px;
+  margin: 2% 2%;
+  border-radius: 20px;
+  font-size: 1vw;
+}
 
 .dev{
-  grid-column-start: 3;
-  grid-column-end: span 8;
+  grid-column-start: 2;
+  grid-column-end: span 10;
   
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(2, auto);
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: auto;
 
-  margin-top: 20vh;
-  height: 100%;
+  margin-top: 25vh;
   background-color: black;
   box-shadow: inset 0 0 0 2px red;
+}
+.dev div{
+  border-right: 2px solid red;
+}
+.dev ul{
+  padding: 0px 0px;
 }
 .dev h2{
-  grid-column-start: 1;
-  grid-column-end: span 4;
-  grid-row-start: 1;
-}
-
-.software{
-  grid-column-start: 1;
-  grid-row-start: 2;
-  box-shadow: inset 0 0 0 2px red;
-  background-color: black;
-}
-.software ul{
-  padding: 0px 0px;
-}
-.software ul li{
-  background-color: gray;
-  text-align: center;
-  display: inline-block;
-  padding: 5px 10px;
-  border-radius: 20px;
-}
-
-.fullstack{
-  grid-column-start: 2;
-  grid-row-start: 2;
-  box-shadow: inset 0 0 0 2px red;
-  background-color: black;
-}
-.fullstack ul{
-  padding: 0px 0px;
-}
-.fullstack ul li{
-  background-color: gray;
-  text-align: center;
-  display: inline-block;
-  padding: 5px 10px;
-  border-radius: 20px;
-}
-
-.firmware{
-  grid-column-start: 3;
-  grid-row-start: 2;
-  box-shadow: inset 0 0 0 2px red;
-  background-color: black;
-}
-.firmware ul{
-  padding: 0px 0px;
-}
-.firmware ul li{
-  background-color: gray;
-  text-align: center;
-  display: inline-block;
-  padding: 5px 10px;
-  border-radius: 20px;
-}
-
-.app{
-  grid-column-start: 4;
-  grid-row-start: 2;
-  box-shadow: inset 0 0 0 2px red;
-  background-color: black;
-}
-.app ul{
-  padding: 0px 0px;
-}
-.app ul li{
-  background-color: gray;
-  text-align: center;
-  display: inline-block;
-  padding: 5px 10px;
-  border-radius: 20px;
+  border-bottom: 2px solid red;
 }
 
 /* Projects section */
+/** 
+  TODO: 
+    Make everything align in the screen evenly
+    Put button correctly in the project box
+*/
 .projects{
-  min-height: 25vh;
-  max-height: 100vh;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
 }
@@ -203,106 +158,98 @@ li a:hover {
   transform: translate(-50%, -50%);
   font-size: 4vw;
 }
+
 .project_list{
-  grid-column-start: 1;
-  grid-column-end: 13;
-  margin-top: 25vh;
-  max-height: 50vh;
+  grid-column-start: 2;
+  grid-column-end: span 10;
+
   display: grid;
-  grid-template-rows: repeat(2, 1fr);
-  grid-template-columns: repeat(13, 1fr);
-  gap: 3vh;
+  /*justify-content: space-evenly;*/
+  justify-items: center;
+
+  margin-top: 25vh;
 }
 
-.online_portfolio{
-  box-shadow: inset 0 0 0 2px red;
-  grid-column-start: 2;
-  grid-column-end: 4;
-  background-color: black;
+.status{
+  display: grid;
+  /* aligns the stuff to the middle */
+  grid-column-end: span 12;
 }
-.online_portfolio h3{
+.status h2{
+  grid-column-end: span 12;
+  font-size: 2vw;
+}
+
+.project{
+  /* Determines the spacing of each project in the grid */
+  grid-column-end: span 2;
+  border: 2px solid red;
+  background-color: black;
+  margin: 1vw;
+}
+.project h3{
   background-color: gray;
   padding: 10px 10px;
   margin: 1vw;
+  grid-column-end: span 19;
+  font-size: 1.5vw;
 }
+.project h4{
+  font-size: 2vw;
+}
+.project p{
+  text-align: center;
+  font-size: 1.2vw;
 
-.ubet{
-  box-shadow: inset 0 0 0 2px red;
-  grid-column-start: 5;
-  grid-column-end: 7;
-  background-color: black;
-}
-.ubet h3{
-  background-color: gray;
-  padding: 10px 10px;
-  margin: 1vw;
-}
-
-.waspet{
-  box-shadow: inset 0 0 0 2px red;
-  grid-column-start: 8;
-  grid-column-end: 10;
-  background-color: black;
-}
-.waspet h3{
-  background-color: gray;
-  padding: 10px 10px;
-  margin: 1vw;
-}
-
-.rand_meal_gen{
-  box-shadow: inset 0 0 0 2px red;
-  grid-column-start: 11;
-  grid-column-end: 13;
-  background-color: black;
-}
-.rand_meal_gen h3{
-  background-color: gray;
-  padding: 10px 10px;
-  margin: 1vw;
-}
-
-.psyrus{
-  box-shadow: inset 0 0 0 2px red;
-  grid-column-start: 2;
-  grid-column-end: 4;
-  background-color: black;
-}
-.psyrus h3{
-  background-color: gray;
-  padding: 10px 10px;
-  margin: 1vw;
+  grid-column-start: 1;
+  grid-column-end: span 10;
 }
 
 /* Experience section */
 .experience{
-  min-height: 50vh;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
 }
 .experience h1{
   position: absolute;
-  margin-top: 15vh;
+  margin-top: 25vh;
   max-height: 50vh;
   left: 50%;
   margin-right: -50%;
   transform: translate(-50%, -50%);
   font-size: 4vw;
 }
-.work{
-  grid-column-start: 3;
-  grid-column-end: 11;
-  margin-top: 25vh;
-}
-
-.lynntech{
+.company{
+  margin-top: 35vh;
   box-shadow: inset 0 0 0 2px red;
   grid-column-start: 2;
-  grid-column-end: 4;
+  grid-column-end: span 10;
   background-color: black;
 }
+.company li{
+  background-color: gray;
+  text-align: center;
+  display: inline-block;
+  padding: 5px 10px;
+  margin: 2% 2%;
+  border-radius: 20px;
+  font-size: 1vw;
+}
 
-.comp_info{
+.position .tools div{
+  grid-column-end: span 2;
+  grid-template-columns: auto;
+}
+.company_info{
+  grid-template-columns: auto;
+  border-bottom: 2px solid red;
+}
+.company_info h2{
+  font-size: 2vw;
+}
+
+/*
+.company_info{
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   padding: 0px 0px;
@@ -338,7 +285,6 @@ li a:hover {
   text-align: right;
   margin-top: 0;
 }
-
 .tools{
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -354,10 +300,10 @@ li a:hover {
   padding: 5px 10px;
   border-radius: 20px;
 }
+*/
 
 /* Contact section */
 .contact{
-  min-height: 20vh;
   display: grid;
 }
 .contact{
@@ -368,7 +314,6 @@ li a:hover {
   transform: translate(-50%, -50%);
   font-size: 4vw;
 }
-
 .contact h1{
   position: absolute;
   margin-top: 20vh;
@@ -377,20 +322,37 @@ li a:hover {
   transform: translate(-50%, -50%);
   font-size: 4vw;
 }
+
 .socials{
-  margin-top: 20vh;
+  margin-top: 30vh;
   padding: 0px 0px;
 }
+.socials a img{
+  max-width: 5vw;
+  height: auto;
+}
 
+/* Rest class configs */
+/* TODO: Fit the color scheme */
 a{
   color: white;
-  background-color: black;
   text-align: center;
   padding: 0px 16px;
   text-decoration: none;
   font-size: 24px;
 }
 a:hover {
+  color: red;
+}
+a.button {
+  padding: 1px 6px;
+  border: 1px outset buttonborder;
+  border-radius: 3px;
+  text-decoration: none;
+  background-color: white;
+  color: black;
+}
+a.button:hover {
   color: red;
 }
 
