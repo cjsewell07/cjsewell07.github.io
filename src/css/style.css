@@ -84,9 +84,8 @@ li a:hover {
 }
 
 /* Skills section */
+/* TODO: Make the top section be grayed to fit the color scheme*/
 .skills{
-  min-height: 50vh;
-  max-height: 100vh;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
 }
@@ -142,9 +141,12 @@ li a:hover {
 }
 
 /* Projects section */
+/** 
+  TODO: 
+    Make everything align in the screen evenly
+    Put button correctly in the project box
+*/
 .projects{
-  min-height: 25vh;
-  max-height: 100vh;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
 }
@@ -162,8 +164,7 @@ li a:hover {
   grid-column-end: span 10;
 
   display: grid;
-  grid-template-rows: auto;
-  justify-content: space-evenly;
+  /*justify-content: space-evenly;*/
   justify-items: center;
 
   margin-top: 25vh;
@@ -171,16 +172,16 @@ li a:hover {
 
 .status{
   display: grid;
-  grid-template-columns: auto;
+  /* aligns the stuff to the middle */
+  grid-column-end: span 12;
 }
 .status h2{
-  grid-column-start: 1;
-  grid-column-end: span 10;
-  grid-template-columns: auto;
+  grid-column-end: span 12;
   font-size: 2vw;
 }
 
 .project{
+  /* Determines the spacing of each project in the grid */
   grid-column-end: span 2;
   border: 2px solid red;
   background-color: black;
@@ -197,7 +198,6 @@ li a:hover {
   font-size: 2vw;
 }
 .project p{
-  min-height: fit-content;
   text-align: center;
   font-size: 1.2vw;
 
@@ -207,7 +207,6 @@ li a:hover {
 
 /* Experience section */
 .experience{
-  min-height: 50vh;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
 }
@@ -220,20 +219,37 @@ li a:hover {
   transform: translate(-50%, -50%);
   font-size: 4vw;
 }
-.work{
-  grid-column-start: 3;
-  grid-column-end: 11;
+.company{
   margin-top: 35vh;
-}
-
-.lynntech{
   box-shadow: inset 0 0 0 2px red;
   grid-column-start: 2;
-  grid-column-end: 4;
+  grid-column-end: span 10;
   background-color: black;
 }
+.company li{
+  background-color: gray;
+  text-align: center;
+  display: inline-block;
+  padding: 5px 10px;
+  margin: 2% 2%;
+  border-radius: 20px;
+  font-size: 1vw;
+}
 
-.comp_info{
+.position .tools div{
+  grid-column-end: span 2;
+  grid-template-columns: auto;
+}
+.company_info{
+  grid-template-columns: auto;
+  border-bottom: 2px solid red;
+}
+.company_info h2{
+  font-size: 2vw;
+}
+
+/*
+.company_info{
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   padding: 0px 0px;
@@ -269,7 +285,6 @@ li a:hover {
   text-align: right;
   margin-top: 0;
 }
-
 .tools{
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -285,10 +300,10 @@ li a:hover {
   padding: 5px 10px;
   border-radius: 20px;
 }
+*/
 
 /* Contact section */
 .contact{
-  min-height: 20vh;
   display: grid;
 }
 .contact{
@@ -299,7 +314,6 @@ li a:hover {
   transform: translate(-50%, -50%);
   font-size: 4vw;
 }
-
 .contact h1{
   position: absolute;
   margin-top: 20vh;
@@ -308,16 +322,18 @@ li a:hover {
   transform: translate(-50%, -50%);
   font-size: 4vw;
 }
+
 .socials{
   margin-top: 30vh;
   padding: 0px 0px;
 }
-
 .socials a img{
   max-width: 5vw;
   height: auto;
 }
 
+/* Rest class configs */
+/* TODO: Fit the color scheme */
 a{
   color: white;
   text-align: center;
