@@ -236,16 +236,26 @@ li a:hover {
   font-size: 1vw;
 }
 
-.position .tools div{
-  grid-column-end: span 2;
-  grid-template-columns: auto;
-}
 .company_info{
-  grid-template-columns: auto;
   border-bottom: 2px solid red;
 }
 .company_info h2{
   font-size: 2vw;
+}
+.company_info h2 a{
+  font-size: 2vw;
+}
+
+.tools{
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+.tools div{
+  grid-column-end: span 3;
+  grid-template-columns: auto;
+}
+.tools div ul{
+  padding: 0px 0px;
 }
 
 /*
