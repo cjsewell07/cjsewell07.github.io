@@ -246,7 +246,18 @@ li a:hover {
   font-size: 2vw;
 }
 
+.position h2{
+  background-color: gray;
+  padding: 10px 10px;
+  margin: 1vw;
+  grid-column-end: span 19;
+  font-size: 1.5vw;
+}
+
 .tools{
+  /* This is for parent element */
+  grid-column-end: span 12;
+  /* This is for nested elements */
   display: grid;
   grid-template-columns: repeat(12, 1fr);
 }
