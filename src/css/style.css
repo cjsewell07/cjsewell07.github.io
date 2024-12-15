@@ -124,20 +124,21 @@ li a:hover {
   
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: auto;
 
   margin-top: 25vh;
   background-color: black;
   box-shadow: inset 0 0 0 2px red;
 }
 .dev div{
-  border-right: 2px solid red;
+  border-right: 1px solid red;
+  border-left: 1px solid red;
 }
 .dev ul{
   padding: 0px 0px;
 }
-.dev h2{
-  border-bottom: 2px solid red;
+.type{
+  border: 2px solid red;
+  background-color: rgb(128, 0, 0);
 }
 
 /* Projects section */
@@ -162,18 +163,13 @@ li a:hover {
 .project_list{
   grid-column-start: 2;
   grid-column-end: span 10;
-
-  display: grid;
-  /*justify-content: space-evenly;*/
-  justify-items: center;
-
   margin-top: 25vh;
 }
 
 .status{
+  /* This is for nested elements */
   display: grid;
-  /* aligns the stuff to the middle */
-  grid-column-end: span 12;
+  grid-template-columns: repeat(12, 1fr);
 }
 .status h2{
   grid-column-end: span 12;
@@ -182,16 +178,17 @@ li a:hover {
 
 .project{
   /* Determines the spacing of each project in the grid */
-  grid-column-end: span 2;
+  /* TODO: Update this when projects are getting bigger */
+  grid-column-end: span 4;
   border: 2px solid red;
   background-color: black;
   margin: 1vw;
+  padding: 4%;
 }
 .project h3{
   background-color: gray;
-  padding: 10px 10px;
+  padding: 4% 4%;
   margin: 1vw;
-  grid-column-end: span 19;
   font-size: 1.5vw;
 }
 .project h4{
@@ -200,9 +197,9 @@ li a:hover {
 .project p{
   text-align: center;
   font-size: 1.2vw;
-
-  grid-column-start: 1;
-  grid-column-end: span 10;
+}
+.project a{
+  font-size: 2vw;
 }
 
 /* Experience section */
@@ -236,16 +233,43 @@ li a:hover {
   font-size: 1vw;
 }
 
-.position .tools div{
-  grid-column-end: span 2;
-  grid-template-columns: auto;
-}
 .company_info{
-  grid-template-columns: auto;
   border-bottom: 2px solid red;
+}
+.company_info ul{
+  border: 2px solid red;
+  background-color: rgb(128, 0, 0);
+  padding: 0px 0px;
+  margin: 0%;
 }
 .company_info h2{
   font-size: 2vw;
+}
+.company_info h2 a{
+  font-size: 2vw;
+}
+
+.position h2{
+  background-color: gray;
+  padding: 10px 10px;
+  margin: 1vw;
+  grid-column-end: span 19;
+  font-size: 1.5vw;
+}
+
+.tools{
+  /* This is for parent element */
+  grid-column-end: span 12;
+  /* This is for nested elements */
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+.tools div{
+  grid-column-end: span 3;
+  grid-template-columns: auto;
+}
+.tools div ul{
+  padding: 0px 0px;
 }
 
 /*

@@ -38,12 +38,12 @@
 		</div>
 		<div class="skills" id="skills">
 			<h1>Development Skills</h1>
-			<div class ="dev">      
-				<div><h2>Software</h2></div>
-				<div><h2>Web</h2></div>
-				<div><h2>Embedded</h2></div>
-				<div><h2>Mobile</h2></div>
-				<div><h2>Desktop</h2></div>
+			<div class="dev">      
+				<div class="type"><h2>Software</h2></div>
+				<div class="type"><h2>Web</h2></div>
+				<div class="type"><h2>Embedded</h2></div>
+				<div class="type"><h2>Mobile</h2></div>
+				<div class="type"><h2>Desktop</h2></div>
 
 				<div><p>Regular use of algorithms and data structures in different languages.</p></div>
 				<div><p>Ability to use UI/UX and CI/CD design for web applications that have APIs incorporated along with TDD.</p></div>
@@ -183,6 +183,13 @@
 				<!-- TODO: Change the project title to another header class -->
 				<div class="status" id="long">
 					<h2>Long-Term</h2>
+					<div class="project" id="fitigued">
+						<h3>Apr 2024 - Present</h3>
+						<h4>Fitigued</h4>
+						<p>
+							This project is to familiarize myself with andriod app development using Kotlin.
+						</p>
+					</div>
 					<div class="project">
 						<h3>2024 - Present</h3>
 						<h4>U-Bet</h4>
@@ -199,58 +206,54 @@
 							learning to develop.
 						</p>
 					</div>
-					<div class="project" id="rand_meal_gen">
-						<h3>Apr 2024 - Present</h3>
-						<h4>Random Meal Generator</h4>
-						<p>
-							This project is to familiarize myself with andriod app development using Kotlin.
-						</p>
-					</div>
-					<div class="project" id="psyrus">
-						<h3>2024 - Present</h3>
-						<h4>Pysrus</h4>
-						<p>
-							This project is to introduce myself into artificial intelligence and machine
-							learning
-						</p>
-					</div>
 				</div>
 				<div class="status" id="short">
 					<h2>Short-Term</h2>
 					<div class="project" id="psyrus">
-						<h3>TBD</h3>
+						<h3>Oct 2024 - Present</h3>
 						<h2>Android Room Database Template</h2>
 						<p>
-							This project is to introduce myself into artificial intelligence and machine
-							learning
+							This project is to familiarize myself with andriod app development using Kotlin.
 						</p>
 					</div>
 				</div>
 				<div class="status" id="finished">
 					<h2>Finished</h2>
 					<div class="project" id="psyrus">
-						<h3>2022</h3>
+						<h3>Sep 2019 - Sep 2019</h3>
+						<h2>Occupoty</h2>
+						<p>
+							Contributed to a toggle-based system used to determine the status of vacancy for bathroom stalls
+						</p>
+						<a href="https://github.com/texashoneybadgers/HackRice9" class="button">HackRice9</a>
+					</div>
+					<div class="project" id="psyrus">
+						<h3>May 2021 - Dec 2021</h3>
 						<h2>Sprout</h2>
 						<p>
 							Contributed to a toggle-based system used to determine the status of vacancy for bathroom stalls
 						</p>
 					</div>
-					<div class="project" id="psyrus">
-						<h3>2022</h3>
-						<h2>Occupoty</h2>
-						<p>
-							Contributed to a toggle-based system used to determine the status of vacancy for bathroom stalls
-						</p>
-						<a href="https://github.com/texashoneybadgers/HackRice9" class="button">github.com/HackRice9</a>
-					</div>
 					<div class="project" id="online_portfolio">
 						<h3>2023 - Present</h3>
 						<h2>Online Portfolio</h2>
 						<p>
-							This is a project I wanted to do to learn Three.JS, WebGL, Blender,
-							and expand my skills in Javascript, HTML, and CSS.
+							This is a project I created to learn Three.JS, WebGL, Blender,
+							and expand my skills in Javascript, HTML, and CSS. Currently still under
+							development, but a demo is below!
 						</p>
-						<a href="./src/html/portfolio.html" class="button">Preview</a>
+						<a href="./src/html/portfolio.html" class="button">Demo</a>
+					</div>
+				</div>
+				<div class="status" id="not_started">
+					<h2>Not Started</h2>
+					<div class="project" id="psyrus">
+						<h3>TBD</h3>
+						<h4>Pysrus</h4>
+						<p>
+							This project is to introduce myself into artificial intelligence and machine
+							learning
+						</p>
 					</div>
 				</div>
 			</div>
@@ -259,15 +262,17 @@
 			<h1>Experience</h1>
 			<!-- TODO: Have it take the difference in time between the months and year -->
 			<div class="company" id="lynntech">
-				<ul class="company_info" id="comp_info">
-					<h2 class="company_site" id="company"> Embedded Software Engineer @ 
-						<a href="https://www.lynntech.com/"><h2>Lynntech, Inc.</h2></a>
-					</h2>
-					<!--
-					<h2 class="date" id="date">August 2022 - Present</h2>
-					<h3 class="location" id="location">College Station, TX</h3>
-					-->
-				</ul>
+				<div class="company_info" id="comp_info">
+					<ul>
+						<h2> Embedded Software Engineer:
+							<a href="https://www.lynntech.com/">Lynntech, Inc.</a>
+						</h2>
+						<!--
+						<h2 class="date" id="date">August 2022 - Present</h2>
+						<h3 class="location" id="location">College Station, TX</h3>
+						-->
+					</ul>
+				</div>
 				<!--
 				<p>
 					Developed embedded applications to interface through different communication
@@ -275,9 +280,7 @@
 				</p>
 				-->
 				<div class="position" id="specialist">
-				</div>
-				<div class="position" id="associate">
-					<h2 class="duration">August 2022 - May 2024</h2>
+					<h2>Embedded Software Engineering Specialist: May 2024 - Present</h2>
 					<div class="tools" id="tools">
 						<div>
 							<h3>Languages</h3>
@@ -301,8 +304,47 @@
 							<ul>
 								<li>FPGA</li>
 								<li>Microchip Processors</li>
-								<li>Raspberry Pi</li>
 								<li>Arduino</li>
+								<li>DAC</li>
+								<li>ADC</li>
+								<li>Memory</li>
+							</ul>
+						</div>
+						<div>
+							<h3>Protocols</h3>
+							<ul>
+								<li>UART</li>
+								<li>RS-232</li>
+								<li>RS-485</li>
+								<li>I2C</li>
+								<li>SPI</li>
+							</ul>
+						</div>
+					</div> 
+				</div>
+				<div class="position" id="associate">
+					<h2>Embedded Software Engineering Associate: August 2022 - May 2024</h2>
+					<div class="tools" id="tools">
+						<div>
+							<h3>Languages</h3>
+							<ul>
+								<li>C</li>
+								<li>Python</li>
+							</ul>
+						</div>
+						<div>
+							<h3>Development Tools</h3>
+							<ul>
+								<li>MPLAB</li>
+								<li>Altium Designer</li>
+								<li>Xilinx SDK</li>
+							</ul>
+						</div>
+						<div>
+							<h3>Devices Used</h3>
+							<ul>
+								<li>FPGA</li>
+								<li>Microchip Processors</li>
 								<li>DAC</li>
 								<li>ADC</li>
 								<li>Memory</li>
@@ -326,7 +368,7 @@
 			<h1>Contact</h1>
 			<ul class="socials" id="socials">
 				<a href="https://github.com/cjsewell07">
-					<img src = "assets/contacts/logo_github.png">
+					<img src = "assets/contacts/logo_github_outlined.png">
 				</a>
 				<a href="https://www.linkedin.com/in/cj-sewell/">
 					<img src = "assets/contacts/logo_linkedin.png">
