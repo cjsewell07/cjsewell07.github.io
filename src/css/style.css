@@ -124,7 +124,6 @@ li a:hover {
   
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: auto;
 
   margin-top: 25vh;
   background-color: black;
@@ -164,18 +163,13 @@ li a:hover {
 .project_list{
   grid-column-start: 2;
   grid-column-end: span 10;
-
-  display: grid;
-  /*justify-content: space-evenly;*/
-  justify-items: center;
-
   margin-top: 25vh;
 }
 
 .status{
+  /* This is for nested elements */
   display: grid;
-  /* aligns the stuff to the middle */
-  grid-column-end: span 12;
+  grid-template-columns: repeat(12, 1fr);
 }
 .status h2{
   grid-column-end: span 12;
@@ -184,7 +178,7 @@ li a:hover {
 
 .project{
   /* Determines the spacing of each project in the grid */
-  grid-column-end: span 2;
+  grid-column-end: span 3;
   border: 2px solid red;
   background-color: black;
   margin: 1vw;
@@ -193,7 +187,6 @@ li a:hover {
   background-color: gray;
   padding: 10px 10px;
   margin: 1vw;
-  grid-column-end: span 19;
   font-size: 1.5vw;
 }
 .project h4{
@@ -202,9 +195,6 @@ li a:hover {
 .project p{
   text-align: center;
   font-size: 1.2vw;
-
-  grid-column-start: 1;
-  grid-column-end: span 10;
 }
 
 /* Experience section */
