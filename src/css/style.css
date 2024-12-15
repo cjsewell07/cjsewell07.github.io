@@ -131,14 +131,15 @@ li a:hover {
   box-shadow: inset 0 0 0 2px red;
 }
 .dev div{
-  border-right: 2px solid red;
+  border-right: 1px solid red;
+  border-left: 1px solid red;
 }
 .dev ul{
   padding: 0px 0px;
 }
 .type{
   border: 2px solid red;
-  background-color: gray;
+  background-color: rgb(128, 0, 0);
 }
 
 /* Projects section */
@@ -242,7 +243,7 @@ li a:hover {
 }
 .company_info ul{
   border: 2px solid red;
-  background-color: red;
+  background-color: rgb(128, 0, 0);
   padding: 0px 0px;
   margin: 0%;
 }
