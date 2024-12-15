@@ -182,10 +182,11 @@ li a:hover {
   border: 2px solid red;
   background-color: black;
   margin: 1vw;
+  padding: 4%;
 }
 .project h3{
   background-color: gray;
-  padding: 10px 10px;
+  padding: 4% 4%;
   margin: 1vw;
   font-size: 1.5vw;
 }
@@ -195,6 +196,9 @@ li a:hover {
 .project p{
   text-align: center;
   font-size: 1.2vw;
+}
+.project a{
+  font-size: 2vw;
 }
 
 /* Experience section */
