@@ -178,7 +178,8 @@ li a:hover {
 
 .project{
   /* Determines the spacing of each project in the grid */
-  grid-column-end: span 3;
+  /* TODO: Update this when projects are getting bigger */
+  grid-column-end: span 4;
   border: 2px solid red;
   background-color: black;
   margin: 1vw;
