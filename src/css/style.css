@@ -136,8 +136,9 @@ li a:hover {
 .dev ul{
   padding: 0px 0px;
 }
-.dev h2{
-  border-bottom: 2px solid red;
+.type{
+  border: 2px solid red;
+  background-color: gray;
 }
 
 /* Projects section */
@@ -238,6 +239,12 @@ li a:hover {
 
 .company_info{
   border-bottom: 2px solid red;
+}
+.company_info ul{
+  border: 2px solid red;
+  background-color: red;
+  padding: 0px 0px;
+  margin: 0%;
 }
 .company_info h2{
   font-size: 2vw;
