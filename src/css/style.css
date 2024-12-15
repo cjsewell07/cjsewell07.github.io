@@ -1,5 +1,16 @@
+[data-theme="dark"] {
+  --color-bg: rgb(27, 27, 27);
+  --color-fg: #ffffff;
+}
+
+[data-theme="light"] {
+  --color-bg: #ffffff;
+  --color-fg: #000000;
+}
+
+
 body {
-  background-color: rgb(27, 27, 27);
+  background-color: var(--color-bg);
 }
 
 /* Nav Bar */
