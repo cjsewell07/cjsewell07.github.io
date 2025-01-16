@@ -1,11 +1,23 @@
 [data-theme="dark"] {
-  --color-bg: rgb(27, 27, 27);
-  --color-fg: #ffffff;
+  --color-text: white;
+  --color-grid-border: red;
+  --color-grid-header-bg: rgb(128, 0, 0);
+  --color-li-bg: gray;
+  --color-bg: rgb(55, 55, 55);
+  --color-fg: black;
+  --color-bg-trans: rgba(0,0,0,0.5);
+  --github-outline: "assets/contacts/logo_github_outlined_dark.png"
 }
 
 [data-theme="light"] {
-  --color-bg: #ffffff;
-  --color-fg: #000000;
+  --color-text: black;
+  --color-grid-border: #33ffff;
+  --color-grid-header-bg: #00cccc;
+  --color-li-bg: rgb(204, 204, 204);
+  --color-bg: rgb(200, 200, 200);
+  --color-fg: white;
+  --color-bg-trans: rgba(255,255,255,0.5);
+  --github-outline: "../../assets/contacts/logo_github_outlined_light.png"
 }
 
 
@@ -18,7 +30,7 @@ body {
   position: fixed;
   display: inline-block;
   top: 0px;
-  background-color: black;
+  background-color: var(--color-fg);
   width: 100%;
   text-align: center;
   /* Stops overlapping when scrolling */
@@ -34,7 +46,7 @@ body {
 
 div{
   text-align: center;
-  color: white;
+  color: var(--color-text);
 }
 
 li{
@@ -42,33 +54,15 @@ li{
 }
 
 li a{
-  color: white;
-  background-color: black;
+  color: var(--color-text);
+  background-color: var(--color-fg);
   text-align: center;
   padding: 0px 16px;
   text-decoration: none;
 }
 
 li a:hover {
-  color: red;
-}
-
-.mode{
-  float: right;
-  padding: 0px 0px;
-}
-.change {
-  cursor: pointer;
-  border: 1px solid #555;
-  border-radius: 40%;
-  width: 20px;
-  text-align: center;
-  padding: 5px;
-  margin-left: 8px;
-}
-.dark{
-  background-color: #222;
-  color: #e6e6e6;
+  color: var(--color-grid-border);
 }
 
 /* Home section */
@@ -120,7 +114,7 @@ li a:hover {
   font-size: 1.2vw;
 }
 .skills li{
-  background-color: gray;
+  background-color: var(--color-li-bg);
   text-align: center;
   display: inline-block;
   padding: 5px 10px;
@@ -137,19 +131,19 @@ li a:hover {
   grid-template-columns: repeat(5, 1fr);
 
   margin-top: 25vh;
-  background-color: black;
-  box-shadow: inset 0 0 0 2px red;
+  background-color: var(--color-fg);
+  box-shadow: inset 0 0 0 2px var(--color-grid-border);
 }
 .dev div{
-  border-right: 1px solid red;
-  border-left: 1px solid red;
+  border-right: 1px solid var(--color-grid-border);
+  border-left: 1px solid var(--color-grid-border);
 }
 .dev ul{
   padding: 0px 0px;
 }
 .type{
-  border: 2px solid red;
-  background-color: rgb(128, 0, 0);
+  border: 2px solid var(--color-grid-border);
+  background-color: var(--color-grid-header-bg);
 }
 
 /* Projects section */
@@ -191,13 +185,13 @@ li a:hover {
   /* Determines the spacing of each project in the grid */
   /* TODO: Update this when projects are getting bigger */
   grid-column-end: span 4;
-  border: 2px solid red;
-  background-color: black;
+  border: 2px solid var(--color-grid-border);
+  background-color: var(--color-fg);
   margin: 1vw;
   padding: 4%;
 }
 .project h3{
-  background-color: gray;
+  background-color: var(--color-li-bg);
   padding: 4% 4%;
   margin: 1vw;
   font-size: 1.5vw;
@@ -229,13 +223,13 @@ li a:hover {
 }
 .company{
   margin-top: 35vh;
-  box-shadow: inset 0 0 0 2px red;
+  box-shadow: inset 0 0 0 2px var(--color-grid-border);
   grid-column-start: 2;
   grid-column-end: span 10;
-  background-color: black;
+  background-color: var(--color-fg);
 }
 .company li{
-  background-color: gray;
+  background-color: var(--color-li-bg);
   text-align: center;
   display: inline-block;
   padding: 5px 10px;
@@ -245,11 +239,11 @@ li a:hover {
 }
 
 .company_info{
-  border-bottom: 2px solid red;
+  border-bottom: 2px solid var(--color-grid-border);
 }
 .company_info ul{
-  border: 2px solid red;
-  background-color: rgb(128, 0, 0);
+  border: 2px solid var(--color-grid-border);
+  background-color: var(--color-grid-header-bg);
   padding: 0px 0px;
   margin: 0%;
 }
@@ -261,7 +255,7 @@ li a:hover {
 }
 
 .position h2{
-  background-color: gray;
+  background-color: var(--color-li-bg);
   padding: 10px 10px;
   margin: 1vw;
   grid-column-end: span 19;
@@ -282,60 +276,6 @@ li a:hover {
 .tools div ul{
   padding: 0px 0px;
 }
-
-/*
-.company_info{
-  display: grid;
-  grid-template-columns: repeat(8, 1fr);
-  padding: 0px 0px;
-  box-shadow: inset 0 0 0 2px red;
-  background-color: black;
-}
-.company{
-  grid-column-start: 1;
-  grid-column-end: 6;
-  grid-row-start: 1;
-  grid-row-end: 3;
-  text-align: left;
-  font-size: 32px;
-}
-.date{
-  grid-column-start: 6;
-  grid-column-end: 9;
-  text-align: right;
-}
-.website{
-  display: inline-block;
-  grid-column-start: 1;
-  grid-column-end: 5;
-}
-.website a{
-  padding: 0;
-  text-align: left;
-  font-size: 18px;
-}
-.location{
-  grid-column-start: 6;
-  grid-column-end: 9;
-  text-align: right;
-  margin-top: 0;
-}
-.tools{
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  padding: 0px 0px;
-}
-.tools div ul{
-  padding: 0px 0px;
-}
-.tools div ul li{
-  background-color: gray;
-  text-align: center;
-  display: inline-block;
-  padding: 5px 10px;
-  border-radius: 20px;
-}
-*/
 
 /* Contact section */
 .contact{
@@ -370,25 +310,29 @@ li a:hover {
 /* Rest class configs */
 /* TODO: Fit the color scheme */
 a{
-  color: white;
+  color: var(--color-text);
   text-align: center;
   padding: 0px 16px;
   text-decoration: none;
   font-size: 24px;
 }
 a:hover {
-  color: red;
+  color: var(--color-grid-border);
 }
 a.button {
   padding: 1px 6px;
   border: 1px outset buttonborder;
   border-radius: 3px;
   text-decoration: none;
-  background-color: white;
-  color: black;
+  background-color: var(--color-text);
+  color: var(--color-fg);
 }
 a.button:hover {
-  color: red;
+  color: var(--color-grid-border);
+}
+
+.github_logo img::after{
+  src: var(--github-outline)
 }
 
 #info{
@@ -397,13 +341,13 @@ a.button:hover {
   width: 100%;
   text-align: center;
   z-index: 100;
-  display:block;
+  display: block;
 }
 #blocker{
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: rgba(0,0,0,0.5);
+  background-color: var(--color-bg-trans);
 }
 #instructions{
   width: 100%;
@@ -417,5 +361,5 @@ a.button:hover {
   text-align: center;
   font-size: 14px;
   cursor: pointer;
-  color: white;
+  color: var(--color-text);
 }
